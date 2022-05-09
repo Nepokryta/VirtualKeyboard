@@ -30,3 +30,30 @@ window.addEventListener('keydown', function(e){
         }
     }
 })
+
+
+window.addEventListener('keyup', function(e) {
+    for(let i = 0; i < key.length; i++) {
+        if(e.keys == key[i].getAttribute('keyname') || e.keys == key[i].getAttribute('lowerCaseName')) {
+            key[i].classList.remove('active')
+            key[i].classList.add('remove')
+        }
+        if(e.code == 'Space') {
+            spaceKey.classList.remove('active');
+            spaceKey.classList.add('remove');
+        }
+        if(e.code == 'ShiftLeft') {
+            shift_right[i].classList.remove('active')
+            shift_right[i].classList.remove('remove')
+        }
+        if(e.code == 'ShiftRight') {
+            shift_left[i].classList.remove('active')
+            shift_left[i].classList.remove('remove')
+        }
+        setTimeout(() => {
+            key[i].classList.remove('remove')
+        },200)
+    }
+})
+
+
