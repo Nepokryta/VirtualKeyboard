@@ -1,0 +1,110 @@
+.container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+.text {
+    width: 774px;
+    height: 90px;
+    margin-bottom: 30px;
+    border: 1px solid #D7D6D6;
+    border-radius: 4px;
+    outline: none;
+    font-size: 24px;
+}
+
+.keyboard {
+    border: 1px solid #D7D6D6;
+    padding: 5px;
+    border-radius: 4px;
+    position: relative;
+    background-color: #F7F7F7;
+}
+
+.line::after {
+    content: "";
+    display: flex;
+    clear: both;
+}
+.sup {
+    vertical-align: super;
+    font-size: small;
+}
+.key {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #D7D6D6;
+    border-radius: 4px;
+    outline: none;
+    margin: 4px;
+    padding: 4px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #F3F3F3;
+    transition: .2s;
+}
+.key1 {
+    text-align: left;
+    line-height: 24px;
+}
+
+.key.active {
+    border: 1px solid coral;
+    background-color: rgb(255, 127, 80);
+    background: seashell;
+}
+.key.remove {
+    animation: keys_animation 0.5s forwards;
+}
+
+@keyframes key_animation {
+    0% {
+        border: 1px solid coral;
+        background-color: rgb(255, 127, 80);
+        background: seashell;
+        color: #000;
+    }
+    100% {
+        background-color: #F3F3F3;
+        color: #000;
+    }
+}
+
+body.active {
+    background-color: rgb(54,54,54);
+}
+
+.backspace {
+    width: 120px;
+}
+.tab {
+    width: 50px;
+}
+
+.del {
+    width: 50px;
+}
+
+.caps_lock {
+    width: 120px;
+}
+
+.enter {
+    width: 78px;
+}
+
+.shift_left {
+    width: 120px;
+}
+
+.ctrl_left {
+    width: 40px;
+}
+
+.space {
+    width: 338px;
+}
